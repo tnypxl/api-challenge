@@ -5,6 +5,7 @@
 - yarn version 1.10.1
 
 ### Installation
+
 Install Postgres: 
 `brew install postgresql`
 Install all packages: 
@@ -22,10 +23,9 @@ Your client has decided to open a store and sell various products. They'd like t
 
 ### Instructions: 
 
-1. Build an api testing apparatus to test and identify any defects.
-2. Write tests to validate the ratings for various products. 
-3. Write tests to validate reviews for various products.
-4. Make suggestions for code improvements or make improvements to the code as you see fit. 
+1. Write tests to validate the ratings for various products. 
+2. Write tests to validate reviews for various products.
+3. Make suggestions for code improvements or make improvements to the code as you see fit. 
 
 ### Considerations: 
 Feel free to use any language or testing framework you’d like.
