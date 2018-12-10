@@ -18,7 +18,7 @@ Run App:
 
 ### Testing Scenario: 
 
-Your client has decided to open a store and sell various products. They'd like to allow thier customers to rate each product. With this offering your client is releasing two new API endpoints.  
+Your client has decided to open a store and sell various products. They'd like to allow their customers to rate each product. With this offering your client is releasing two new API endpoints.  
 
 ### Instructions: 
 
