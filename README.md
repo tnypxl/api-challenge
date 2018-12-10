@@ -1,44 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# api tesing coding challenge
 
-## Available Scripts
+### Environment
+- postgres version (PostgreSQL) 11.1
+- yarn version 1.10.1
 
-In the project directory, you can run:
+### Installation
+Install Postgres: 
+`brew install postgresql`
+Install all packages: 
+`yarn`
+Create PostgresDB Locally: 
+`createdb api-challenge`
+Seed DB: 
+`npm run seed`
+Run App: 
+`npm run start`
 
-### `npm start`
+### Testing Scenario: 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Your client has decided to open a store and sell various products. They'd like to allow thier customers to rate each product. With this offering your client is releasing two new API endpoints.  
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Instructions: 
 
-### `npm test`
+1. Build an api testing apparatus to test and identify any defects.
+2. Write tests to validate the ratings for various products. 
+3. Write tests to validate reviews for various products.
+4. Make suggestions for code improvements or make improvements to the code as you see fit. 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Considerations: 
+Feel free to use any language or testing framework you’d like.
