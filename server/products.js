@@ -28,4 +28,18 @@ router.get('/:id', function(req, res, next) {
         })
 });
 
+router.get('/:id/reviews', function(req, res, next) {
+    Product.findOne({
+        where:{id:req.params.id},
+        include: [Review]
+    })
+    .then(result => {
+        if (!result) {
+            var errRes = new Error('Record not found!');
+            return next(errRes)
+        }
+        res.status(200).send(result.reviews);
+    })
+});
+
 module.exports = router
