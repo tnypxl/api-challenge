@@ -8,6 +8,6 @@ api
   .use('/products', products)
   .use('/reviews', reviews)
   .use('/users', users)
+  .use((req, res, err) => res.status(404).send({ message: 'Not Found' }));
 // No routes matched? 404.
 // api.use((req, res) => res.status(404).end()) 
-api.use((req, res, err) => res.status(404).send({ message: 'Not Found' }))
