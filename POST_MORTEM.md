@@ -1,4 +1,4 @@
-# Post Mortem
+# Postmortem
 
 ### Database
 
