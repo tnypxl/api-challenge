@@ -75,7 +75,7 @@ describe('Users', () => {
           let allProductIds = response.body.map(r => r.product_id);
           let uniqueProductIds = allProductIds.filter(onlyUnique);
 
-          expect(allProductIds.length).to.equal(uniqueProductIds.length);
+          expect(allProductIds.length).to.equal(uniqueProductIds.length, 'User has multiple reviews for the same product');
 
           if (error) return done(error);
           done();
