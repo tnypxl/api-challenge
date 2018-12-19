@@ -28,6 +28,7 @@
     "start": "concurrently \"react-scripts start\" \"nodemon server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:api": "NODE_ENV=test npx mocha --exit",
     "eject": "react-scripts eject",
     "seed": "node db/seed.js"
   },
@@ -41,9 +42,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "chai": "^4.2.0",
     "chalk": "^2.4.1",
+    "mocha": "^5.2.0",
     "path": "^0.12.7",
-    "react-dev-utils": "^6.1.1"
+    "react-dev-utils": "^6.1.1",
+    "supertest": "^3.3.0"
   },
   "proxy": "http://localhost:8000"
 }
