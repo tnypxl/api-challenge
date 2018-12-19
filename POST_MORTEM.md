@@ -7,18 +7,23 @@
 * In the products table, categories should really be its own table. The short term win is apparent, but long-term it could get hairy creating RESTful paths for categories without needless complexity. Categories are as much a resource as reviews or products. Not to mention you have more flexibility than you would on single field. Also, none of the products had users assigned.
 * Another perculiar thing in the products table is the missing user_id value on all the products. I imagine that is left empty for admin assignes to be associated. At least that would be my recommendation.
 
-### Manually testing the endpoints
+### App code
+
+* Models were missing a ton of fields. (observed)
+* There were some small issues surrounding app server code. (resolved)
+
+### Manually testing the API
 
 * Every endpoint had something wrong with it. All of them had some combination incorrect response status and bodies. (resolved)
 * Several endpoints were returning 500 status despite actually returning results. (resolved)
-* I added endpoints to some of the endpoints. Users should list reviews and products should list reviews. (enhancement)
-* There seems to be a disparity between the fields in models and those returned their relative endpoints. Not sure if this is an issue or not, but I'd air on the side of carefully curating which fields to expose on an endpoint.
+* I added endpoints for products and users to display reviews for their respective instances. (enhancement)
+* There seems to be a disparity between the fields in models and those returned respective endpoints. Not sure if this is intentional. Should someone add POST/DELETE/UPDATE endpoints, models will need to be updated according with fields and validations. 
 * I felt building out the remainder of CRUD endpoints was out of scope for this project. But lord, it needs it. POST/UPDATE/DELETE endpoints are where the real fun happens.
 
 
 ### Test Framework
 
-Admittedly its a basic setup. I went with Supertest (API testing library), MochaJS (test runner), and ChaiJS (assertions). I really like Mocha + Chai and I've got a lot of experience in those particular libraries. I chose Supertest because it was simple to get started and allowed me some flexibility in terms of test runner and assertion library. That despite it providing its own assertion tools.
+Admittedly its a basic setup. I went with Supertest (API testing library), MochaJS (test runner), and ChaiJS (assertions). I really like Mocha + Chai mostly due to my experience with them. I chose Supertest because it was simple to get started and allowed me some flexibility in test runner and assertions. Thats despite it providing its own assertion tools out of the box. I'd probably recommend something Dredd if you want to combine documentation and testing in one tool. But Supertest does the job for now.
 
 
 ### The Tests
@@ -30,5 +35,5 @@ Of course, there is a lot mroe I'd want to add like fake endpoints for testing d
 
 ### Conclusion
 
-I had a lot of fun finding all the issues in this project and I'm sure I missed a couple things. But believe I left the app in a much better state than received. There are many ways to evolve the test approach here, but for now this is a good start.
+I had a lot of fun finding all the issues in this project and I'm sure I missed a couple things. But I believe the app is in a much better state than I received it. There are many ways to evolve the test approach here, but for now this is a good start.
 
